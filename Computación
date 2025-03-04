@@ -1,0 +1,457 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP7QN7DZhlUBptyuHBMUlIS",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sebasveos/Page-Portfolio/blob/main/Computaci%C3%B3n\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Mw09LV2DJ8HS"
+      },
+      "outputs": [],
+      "source": [
+        "resultado1 = 5+3*8/2-1;\n",
+        "resultado2 = 6-2+5*3+2;\n",
+        "\n",
+        "print(\"Resultado 1: %s %s\"%(resultado1, type(resultado2)));\n",
+        "print(\"Resultado 2: {}\".format(resultado2));\n",
+        "print(f\"Resultado 2:{resultado2}\");\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nombre = input('Nombre: ');\n",
+        "edad = input('Edad: ');\n",
+        "peso = input('Peso: ');\n",
+        "estatura = input('Estura: ');\n",
+        "\n",
+        "IMC = float(peso) / (float(estatura)**2)\n",
+        "\n",
+        "##print(f\"Indice de masa corporal:{IMC}\");\n",
+        "\n",
+        "print(IMC);\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "pCgef0zwMcZq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frutas = [\"manzana\",\"sandia\",\"pera\",\"Uva\",\"Pera\" ]\n",
+        "\n",
+        "type(frutas)\n",
+        "\n",
+        "dir(frutas);"
+      ],
+      "metadata": {
+        "collapsed": true,
+        "id": "efMdjPkXO69s"
+      },
+      "execution_count": 45,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(frutas)\n",
+        "\n",
+        "print(frutas[1:3])\n",
+        "\n",
+        "\n",
+        "#Lee desde la [1] de dos en dos\n",
+        "print(frutas[1:6:2])\n",
+        "\n",
+        "print(frutas[:3])\n",
+        "\n",
+        "print(frutas[::2])\n",
+        "\n",
+        "#Invertir lista\n",
+        "print(frutas[::-2])\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "kdveZodhSC1v"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Para general\n",
+        "\n",
+        "print(list(range(1,40,2)))\n",
+        "\n",
+        "print(list(range(50,10,-1)))\n"
+      ],
+      "metadata": {
+        "id": "OCusvnUQUDzH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = \"este es un texto\"\n",
+        "\n",
+        "print(texto[10:20])\n",
+        "\n",
+        "print(texto[10:20])\n",
+        "\n",
+        "print(texto[::-1])\n",
+        "\n",
+        "palabras = texto.split()\n",
+        "print(palabras)\n",
+        "\n",
+        "palabras[1] = palabras[1].upper()\n",
+        "print(palabras[::-1])"
+      ],
+      "metadata": {
+        "id": "f3uEyI67VQ1w"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Valores de la tupla\n",
+        "mi_tupla = (1, \"Manzana\", [1,True,0,2])\n",
+        "\n",
+        "print(type(mi_tupla))\n",
+        "\n",
+        "print(mi_tupla[2][3])\n",
+        "\n",
+        "mi_tupla[2].append(\"Ola\")\n",
+        "\n",
+        "print(mi_tupla[2])"
+      ],
+      "metadata": {
+        "id": "7JKpmPuWW1av"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Lista que viene de otro lugar\n",
+        "\n",
+        "resulset = [(1, \"Juan\", 2000),\n",
+        "            (2,\"Maria\",3000),\n",
+        "            (3,\"Pedro\", 5000)\n",
+        "           ]\n",
+        "\n",
+        "for i in resulset:\n",
+        "  print(i[1])\n",
+        "\n",
+        "for id,nombre,salario in resulset:\n",
+        "  print(f\"El empleado {id}, Se llama {nombre} y su salario es {salario}\")"
+      ],
+      "metadata": {
+        "id": "0ixqBTqHYubm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Diccionario**"
+      ],
+      "metadata": {
+        "id": "Lxlsk_1zbaID"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mi_dic = {\"id\":1, \"nombre\":\"Juan\",\"salario\":20000}\n",
+        "\n",
+        "print(mi_dic)\n",
+        "print(type(mi_dic))\n",
+        "\n",
+        "print(\"Metodo 1: EL usuario {id}, Se llama {nombre} y su salario es {salario}\".format(**mi_dic))\n",
+        "print(\"Metodo 2: EL usuario {id}, Se llama {nombre} y su salario es {salario}\".format(id=mi_dic[\"id\"],nombre=mi_dic[\"nombre\"],salario=mi_dic[\"salario\"]))\n"
+      ],
+      "metadata": {
+        "id": "jlQsl0nXbeWE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "resulset = [{\"id\":1, \"nombre\":\"Juan\",\"salario\": 2000},\n",
+        "            {\"id\":2, \"nombre\":\"Maria\",\"salario\": 3000},\n",
+        "            {\"id\":3, \"nombre\":\"Pedro\",\"salario\": 5000}\n",
+        "           ]\n",
+        "\n",
+        "print(\"Metodo 1: EL usuario {id}, Se llama {nombre} y su salario es {salario}\".format(**resulset[0]))"
+      ],
+      "metadata": {
+        "id": "HnMdMuvac57W"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "resulset = {\"id\":1, \"nombre\":\"Juan\",\"salario\":20000}"
+      ],
+      "metadata": {
+        "id": "J-pyv7fqeW-F"
+      },
+      "execution_count": 105,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "llaves = resulset.keys()\n",
+        "\n",
+        "print(llaves)  #Diccionario\n",
+        "print(resulset.values())\n",
+        "print(resulset.items())"
+      ],
+      "metadata": {
+        "id": "IlZdoLY7d8GM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Conjuntos(Set)**"
+      ],
+      "metadata": {
+        "id": "eaCxwdIpj46v"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "conjunto = {1,2,3,4,5}\n",
+        "conjunto2 = {4,5,6,7}\n",
+        "\n",
+        "lista = [1,3,1,1,2,3,4,5,3,2,3,3,4]"
+      ],
+      "metadata": {
+        "id": "gZ1pbCLpjwng"
+      },
+      "execution_count": 125,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "conjunto3 = set(lista)\n",
+        "\n",
+        "print(conjunto)\n",
+        "print(conjunto2)\n",
+        "print(conjunto3)"
+      ],
+      "metadata": {
+        "id": "6aq7yODPkTnZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(conjunto.intersection(conjunto2))\n",
+        "print(conjunto.union(conjunto2))\n",
+        "print(conjunto.difference(conjunto2))\n",
+        "print(conjunto2.difference(conjunto))\n",
+        "print(conjunto.symmetric_difference(conjunto2))"
+      ],
+      "metadata": {
+        "id": "BFlAro2pk3ck"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = conjunto.pop()\n",
+        "\n",
+        "print(x)\n",
+        "print(conjunto)"
+      ],
+      "metadata": {
+        "id": "UTpVhvB5lkA2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "edad = input(\"Ingrese su edad: \")\n",
+        "\n",
+        "if int(edad) >= 18:\n",
+        "  print(\"Es mayor de edad\")\n",
+        "else:\n",
+        "  print(\"Es menor de edad\")"
+      ],
+      "metadata": {
+        "id": "vs6KdC74l936"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ac + b = 0\n",
+        "\n",
+        "a = float(input(\"Ingrese el valor de a: \"))\n",
+        "b = float(input(\"Ingrese el valor de b: \"))\n",
+        "\n",
+        "print(f\"El valor de x es: {b/a}\")"
+      ],
+      "metadata": {
+        "id": "OYJsvzfkm1Ji"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = float(input(\"Ingrese el valor de a: \"))\n",
+        "b = float(input(\"Ingrese el valor de b: \"))\n",
+        "c = float(input(\"Ingrese el valor de c: \"))\n",
+        "\n",
+        "d = (b**2 - 4*a*c)\n",
+        "print(d)\n",
+        "\n",
+        "if d == 0:\n",
+        "  print(f\"Las raices son iguales y tiene ell valor de: {b/(2*a)}\")\n",
+        "elif d > 0:\n",
+        "  print(f\"Las raices son: \\nx1 = {-b + d**0.5/(2*a)} \")\n",
+        "  print(f\"Las raices son: \\nx1 = {-b + d**0.5/(2*a)} \")\n",
+        "else:\n",
+        "  print(\"No tiene raices reales\")"
+      ],
+      "metadata": {
+        "id": "MfEgvBIyoP74"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "suma = 0\n",
+        "natural1 = 0\n",
+        "\n",
+        "while suma <= 500:\n",
+        "  natural1 = natural1 + 2\n",
+        "  #natural1 +=1\n",
+        "  suma = suma + natural1\n",
+        "\n",
+        "print(natural1)\n",
+        "\n",
+        "print(suma)"
+      ],
+      "metadata": {
+        "id": "yWWV2r0UqDrJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "valor = 3\n",
+        "for i in range(1,101):\n",
+        "\n",
+        "  print(f\"3*{i} = {valor}\")\n",
+        "  valor += 3*1"
+      ],
+      "metadata": {
+        "collapsed": true,
+        "id": "ENWbuvukq5PP"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random as ra"
+      ],
+      "metadata": {
+        "id": "JF1_7gi9r2Ro"
+      },
+      "execution_count": 147,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(ra.randint(1,100))\n",
+        "print(ra.randrange(1,50,5))\n",
+        "print(ra.random())"
+      ],
+      "metadata": {
+        "id": "wxu_hxYxsC6X"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ra.seed(4)\n",
+        "print(ra.random())"
+      ],
+      "metadata": {
+        "id": "KnJvylcFslPP"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
